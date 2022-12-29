@@ -206,17 +206,15 @@ public final class GirisEkrani extends javax.swing.JFrame implements IDuzenleyic
     }//GEN-LAST:event_sifreTextFocusLost
 
     
-    /*
-    * Buton actions
-    */
-    
-    private void girisButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_girisButtonActionPerformed
-        
-    }//GEN-LAST:event_girisButtonActionPerformed
-
     private void basvurButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_basvurButtonActionPerformed
         ActionAyarlari.setVisitible(this, new BasvuruEkrani());
     }//GEN-LAST:event_basvurButtonActionPerformed
+
+    private void girisButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_girisButtonActionPerformed
+       // this.setVisible(false);
+       // new HesapEkrani().setVisible(true);
+        ActionAyarlari.setVisitible(this, new HesapEkrani());
+    }//GEN-LAST:event_girisButtonActionPerformed
 
     
     public static void main(String args[]) {
