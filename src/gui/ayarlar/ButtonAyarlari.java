@@ -4,6 +4,10 @@ import java.awt.Color;
 import javax.swing.JButton;
 
 public class ButtonAyarlari {
+    
+    /*
+    *Arkaplan ve yazı rengi ayarları
+    */
 
     private static Color originalBgColor, originalFgColor;
 

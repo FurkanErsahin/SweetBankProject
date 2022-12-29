@@ -1,5 +1,6 @@
 package gui;
 
+import gui.ayarlar.ActionAyarlari;
 import gui.ayarlar.ButtonAyarlari;
 import gui.ayarlar.IDuzenleyici;
 import gui.ayarlar.TextAyarlari;
@@ -125,19 +126,19 @@ public final class GirisEkrani extends javax.swing.JFrame implements IDuzenleyic
         girisEkraniPanelLayout.setVerticalGroup(
             girisEkraniPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(girisEkraniPanelLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(60, 60, 60)
                 .addComponent(hosgeldinizLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60)
                 .addComponent(kimlikText, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60)
                 .addComponent(sifreText, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(60, 60, 60)
                 .addComponent(girisButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(60, 60, 60)
                 .addGroup(girisEkraniPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(soruLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(basvurButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         girisEkraniPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {basvurButton, soruLabel});
@@ -165,6 +166,9 @@ public final class GirisEkrani extends javax.swing.JFrame implements IDuzenleyic
         TextAyarlari.setOnlyNumber(kimlikText);
     }
     
+    /*
+    *Buton renklendirmeleri
+    */
     
     private void girisButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_girisButtonMouseEntered
         ButtonAyarlari.setBgFg(girisButton, Color.cyan, Color.yellow);
@@ -181,6 +185,10 @@ public final class GirisEkrani extends javax.swing.JFrame implements IDuzenleyic
         ButtonAyarlari.setOriginalBgFg(basvurButton);
     }//GEN-LAST:event_basvurButtonMouseExited
 
+    /*
+    *Text odaklanmaları
+    */
+    
     private void kimlikTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_kimlikTextFocusGained
         TextAyarlari.checkTheTextFocusGained(kimlikText, KIMLIK_TEXT_ORIGINAL);
     }//GEN-LAST:event_kimlikTextFocusGained
@@ -197,12 +205,17 @@ public final class GirisEkrani extends javax.swing.JFrame implements IDuzenleyic
         TextAyarlari.checkTheTextFocusLost(sifreText);
     }//GEN-LAST:event_sifreTextFocusLost
 
+    
+    /*
+    * Buton actions
+    */
+    
     private void girisButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_girisButtonActionPerformed
         
     }//GEN-LAST:event_girisButtonActionPerformed
 
     private void basvurButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_basvurButtonActionPerformed
-        
+        ActionAyarlari.setVisitible(this, new BasvuruEkrani());
     }//GEN-LAST:event_basvurButtonActionPerformed
 
     
